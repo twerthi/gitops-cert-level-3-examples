@@ -54,11 +54,11 @@ spec:
           targetRevision: '0.1.0'
           helm:
             valueFiles:
-            - $values/helm-multi-source/my-values/common-values.yaml          
-            - $values/helm-multi-source/my-values/app-version/{{.version}}-values.yaml               
-            - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml  
-            - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml                
-            - $values/helm-multi-source/my-values/envs/{{.env}}-values.yaml
+            - $values/my-values/common-values.yaml
+            - $values/my-values/app-version/{{.version}}-values.yaml
+            - $values/my-values/env-type/{{.type}}-values.yaml  
+            - $values/my-values/regions/{{.region}}-values.yaml 
+            - $values/my-values/envs/{{.env}}-values.yaml
         - repoURL: 'https://github.com/twerthi/gitops-cert-level-3-examples.git'
           targetRevision: HEAD
           ref: values
